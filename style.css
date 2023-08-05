@@ -1,0 +1,165 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(180deg, rgba(44,49,87,0.9921218487394958) 18%, rgba(33,34,62,1) 52%, rgba(29,28,53,1) 95%);
+    font-family: 'Inter', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   gap: 2rem;
+ 
+}
+h1{
+    margin-top: 60px;
+    color: white;
+    font-size: 4rem;
+}
+#weatherForm{
+width: 100%;
+display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="text"]{
+    width: 35%;
+    height: 35px;
+padding: 7px 8px 7px 8px;
+border-radius: 10px;
+background: linear-gradient(168.44deg, rgba(46, 51, 90, 0.26) 1.62%, rgba(28, 27, 51, 0.26) 95.72%);
+-webkit-box-shadow: -1px -2px 76px -16px rgba(46,51,90,1);
+-moz-box-shadow: -1px -2px 76px -16px rgba(46,51,90,1);
+box-shadow: -1px -2px 76px -16px rgba(46,51,90,1);
+border: 1px solid rgba(46,51,90,1);
+    outline: none;
+    transition: 0.3s linear ;
+    color: white;
+    cursor: pointer;
+}
+input[type="text"]::placeholder{
+    color: gray;
+}
+input[type="text"]:focus{
+    background: #4A397FB2;
+    border: 1px solid rgba(46,51,90,1);
+}
+
+button{
+    width: 10%;
+    height: 51px;
+    padding: 7px 8px 7px 8px;
+border-radius: 10px;
+background: #4A397FB2;
+color: white;
+border: 0;
+margin-left: 10px;
+transition: 0.3s linear ;
+border: 1px solid #4A397FB2;
+cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(168.44deg, rgba(46, 51, 90, 0.26) 1.62%, rgba(28, 27, 51, 0.26) 95.72%);
+border: 1px solid #4A397FB2;
+}
+
+.parent-div{
+   
+    filter: url('#flt_tag');
+    
+}
+.flt_svg {
+    visibility: hidden; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+.card-det{
+  /* Rectangle 1 */
+  padding-top: 10px;
+    padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  margin: 0 auto;
+width: 342px;
+height: 184px;
+clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+background: linear-gradient(90deg, #5936B4 0%, #362A84 103.55%);
+
+}
+.card-det>p{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.card-det>h2{
+    margin-top: 30px;
+    color: white;
+    font-size: 40px;
+}
+.desc{
+    margin-top: 3px;
+    display: flex;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+.card>img{
+    margin-left: 204px;
+    position: absolute;
+    z-index: 105;
+    
+    
+}
+#cont{
+    display: grid;
+    align-self: center;
+    margin: auto; 
+    place-items: center;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 600px) {
+    h1{
+        margin-top: 60px;
+        color: white;
+        font-size: 2rem;
+    }
+    .card>img{
+        
+            margin-left: 190px;
+            position: absolute;
+            z-index: 105;
+            
+            
+        
+        
+    }
+    .container{
+        width: 100%;}
+        #weatherForm {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        input[type="text"] {
+            width: 80%;
+            height: 50px;
+            font-size: 15px;
+        }
+        button{
+            width: 35%;
+        }
+}
+
